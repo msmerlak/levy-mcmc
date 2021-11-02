@@ -1,6 +1,11 @@
 name = "levy-mcmc"
-[compat]
-julia = "1.6.2"
-DrWatson = "2.5.0"
+
 [deps]
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
 DrWatson = "634d3b9d-ee7a-5ddf-bec9-22491ea816e1"
+Graphs = "86223c79-3864-5bf0-83f7-82e725a168b6"
+StatsBase = "2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"
+
+[compat]
+DrWatson = "2.5.0"
+julia = "1.6.2"
