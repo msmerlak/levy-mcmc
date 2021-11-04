@@ -1,13 +1,13 @@
 using DrWatson
 @quickactivate
 
-include(srcdir("zipf-mcmc.jl"))
+include(srcdir("ising.jl"))
 include(srcdir("utils.jl"))
 
-using Graphs
+using Graphs, GraphPlot
 using Plots
 
-lattice = Graphs.grid([20, 20], periodic = true)
+lattice = Graphs.grid([20, 20], periodic = false)
 
 A=adjacency_matrix(lattice)
 L = size(A)[1]
@@ -15,7 +15,7 @@ L = size(A)[1]
 σ₀ = ones(L)
 
 T = 1.5
-S = 100
+S = 1
 max_flips = 5000
 
 begin

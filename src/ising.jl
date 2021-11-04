@@ -9,7 +9,6 @@ mutable struct Ising
     S::Int64
     rng::T where T <: Random.AbstractRNG
     magnetization::Float64
-
 end
 
 function energy(model::Ising, σ = nothing)
@@ -21,7 +20,6 @@ end
 
 
 function spin_flips!(model)
-
 
     range = collect(1:model.S)
     n = min(length(model.σ), sample(model.rng, range, ProbabilityWeights(1 ./ range.*2)))
